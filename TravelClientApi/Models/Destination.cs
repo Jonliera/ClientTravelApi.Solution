@@ -47,5 +47,10 @@ namespace TravelClientApi.Models
       string jsonDestination = JsonConvert.SerializeObject(destination);
       ApiHelper.Put(destination.DestinationId, jsonDestination);
     }
+
+    public static void Delete(int id)
+    {
+      ApiHelper.Delete(id);
+    }
   }
 }

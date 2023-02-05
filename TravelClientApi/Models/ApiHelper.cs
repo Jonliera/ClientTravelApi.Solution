@@ -37,5 +37,12 @@ namespace TravelClientApi.Models
       request.AddJsonBody(newDestination);
       await client.PutAsync(request);
     }
+    public static async void Delete(int id)
+    {
+      RestClient client = new RestClient("http://localhost:5000/");
+      RestRequest request = new RestRequest($"api/v2.0/destinations/{id}", Method.Delete);
+      request.AddHeader("Content-Type", "application/json");
+      await client.DeleteAsync(request);
+    }
   }
 }
