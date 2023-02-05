@@ -8,4 +8,5 @@
 <p>Rating: @Model.Rating</p>
 <p>Review: @Model.Review</p>
 
-@Html.ActionLink("Return to all Destinations", "Index")
+<p>@Html.ActionLink("Return to all Destinations", "Index")</p>
+<p>@Html.ActionLink("Edit details", "Edit", new { id = @Model.DestinationId })</p>

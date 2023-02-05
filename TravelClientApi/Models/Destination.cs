@@ -42,10 +42,10 @@ namespace TravelClientApi.Models
       ApiHelper.Post(jsonDestination);
     }
 
-    // public static void Put(Destination destination)
-    // {
-    //   string jsonDestination = JsonConvert.SerializeObject(destination);
-    //   ApiHelper.Put(destination.DestinationId, jsonDestination);
-    // }
+    public static void Put(Destination destination)
+    {
+      string jsonDestination = JsonConvert.SerializeObject(destination);
+      ApiHelper.Put(destination.DestinationId, jsonDestination);
+    }
   }
 }

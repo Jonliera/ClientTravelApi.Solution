@@ -29,13 +29,13 @@ namespace TravelClientApi.Models
       request.AddJsonBody(newDestination);
       await client.PostAsync(request);
     }
-    // public static async void Put(int id, string newDestination)
-    // {
-    //   RestClient client = new RestClient("http://localhost:5000/");
-    //   RestRequest request = new RestRequest($"api/v2.0/destinations/{id}", Method.Put);
-    //   request.AddHeader("Content-Type", "application/json");
-    //   request.AddJsonBody(newDestination);
-    //   await client.PutAsync(request);
-    // }
+    public static async void Put(int id, string newDestination)
+    {
+      RestClient client = new RestClient("http://localhost:5000/");
+      RestRequest request = new RestRequest($"api/v2.0/destinations/{id}", Method.Put);
+      request.AddHeader("Content-Type", "application/json");
+      request.AddJsonBody(newDestination);
+      await client.PutAsync(request);
+    }
   }
 }
