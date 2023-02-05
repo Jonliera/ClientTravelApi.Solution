@@ -1,0 +1,11 @@
+@{
+  ViewData["Title"] = $"Detials for {Model.Country}";
+}
+
+<h1>All About @Model.Country</h1>
+
+<p>City: @Model.City</p>
+<p>Rating: @Model.Rating</p>
+<p>Review: @Model.Review</p>
+
+@Html.ActionLink("Return to all Destinations", "Index")
