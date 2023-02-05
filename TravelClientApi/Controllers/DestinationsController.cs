@@ -16,4 +16,16 @@ public class DestinationsController : Controller
     Destination destination = Destination.GetDetails(id);
     return View(destination);
   }
+
+  public ActionResult Create()
+  {
+    return View();
+  }
+
+  [HttpPost]
+  public ActionResult Create(Destination destination)
+  {
+    Destination.Post(destination);
+    return RedirectToAction("Index");
+  }
 }
